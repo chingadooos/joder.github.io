@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Quien quiere más a quien?</title>
+  <style>
+    .body {
+      background-color: darkblue;
+      text-align: center;
+    }
+
+    .body__title {
+      color: white;
+    }
+
+    .body__img {
+      width: 100%;
+      max-width: 512px;
+    }
+  </style>
+</head>
+
+<body class="body">
+  <h1 class="body__title">¿Quien quiere más a quien?</h1>
+  <img src="https://cdn.domestika.org/c_fit,dpr_auto,f_auto,q_80,t_base_params,w_820/v1705431512/content-items/014/823/008/interior_img3-original.jpg?1705431512" alt="siuuu" class="body__img" />
+  <br>
+  <button id="yes">Javiii</button>
+  <button id="no">Ana</button>
+
+  <script>
+    const vuttonSi = document.getElementById('yes');
+    const vuttonNo = document.getElementById('no');
+
+    const Losé = () => {
+      alert('Obviamente javi te gana');
+      alert('Y no le vas a ganar');
+      alert("él te dedica esta cancion")
+      location.href = 'https://open.spotify.com/intl-es/track/5xSt1wxZobFcLzHrFakv6z?si=5f97879c08634969';
+    };
+
+    const tengosueño = () => {
+      vuttonNo.style.position = 'absolute';
+      vuttonNo.style.top = (Math.random() * window.innerHeight + 'px');
+      vuttonNo.style.left = (Math.random() * window.innerWidth + 'px');
+    };
+
+    vuttonSi.addEventListener('click', Losé);
+    vuttonNo.addEventListener('mouseover', tengosueño);
+  </script>
+</body>
+
+</html>
